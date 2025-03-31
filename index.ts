@@ -36,4 +36,5 @@ serve({
   },
 });
 
-console.log(`✅ Secure server running at http://localhost:${PORT}`);
+console.log(`✅ Server running at: ${process.env.VERCEL_URL || `http://localhost:${PORT}`}`);
+
