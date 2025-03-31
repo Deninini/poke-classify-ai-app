@@ -2,7 +2,7 @@
   "name": "pokemon-image-classifier-ai---web-app",
   "private": true,
   "scripts": {
-    "build": "bun build src/script.ts --outdir dist"
+    "build": "bun build src/script.ts --outdir public"
   },
   "devDependencies": {
     "@types/bun": "latest"
