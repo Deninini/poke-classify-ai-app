@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload a Pokémon Picture - PokéIdentifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PokéIdentifier</h1>
+            <p>Upload a Pokémon Picture</p>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </header>
+        
+        <main class="upload-section">
+            <div class="upload-container">
+                <div class="upload-area" id="dropArea">
+                    <div class="upload-instructions">
+                        <div class="icon">📤</div>
+                        <p>Drag & drop your Pokémon image here</p>
+                        <p class="or">OR</p>
+                        <label for="fileInput" class="btn">Select Image</label>
+                        <input type="file" id="fileInput" accept="image/*" hidden>
+                    </div>
+                    <div class="preview-container" id="previewContainer" hidden>
+                        <img id="imagePreview" alt="Preview">
+                        <button class="btn remove-btn" id="removeImage">Remove</button>
+                    </div>
+                </div>
+                
+                <button class="btn submit-btn" id="identifyBtn" disabled>Identify Pokémon</button>
+            </div>
+            
+            <div class="result-container" id="resultContainer" hidden>
+                <h2>Identification Result</h2>
+                <div class="result-content" id="resultContent"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 PokéIdentifier. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="upload.ts"></script>
+</body>
+</html>

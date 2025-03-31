@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use the API - PokéIdentifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PokéIdentifier</h1>
+            <p>API Documentation</p>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </header>
+        
+        <main class="api-section">
+            <div class="api-container">
+                <h2>API Usage</h2>
+                <p>Integrate our Pokémon identification API into your application:</p>
+                
+                <div class="code-block">
+                    <pre><code>POST /api/identify
+Content-Type: application/json
+
+{
+  "imageUrl": "https://example.com/pokemon.jpg"
+}</code></pre>
+                </div>
+                
+                <h3>Try it now</h3>
+                <div class="try-api">
+                    <input type="url" id="imageUrlInput" placeholder="Enter image URL (e.g., https://example.com/pokemon.jpg)">
+                    <button class="btn" id="apiSubmitBtn">Identify Pokémon</button>
+                </div>
+                
+                <div class="result-container" id="apiResultContainer" hidden>
+                    <h3>API Response:</h3>
+                    <pre id="apiResponse"></pre>
+                </div>
+            </div>
+            
+            <div class="api-docs">
+                <h2>API Documentation</h2>
+                
+                <div class="docs-section">
+                    <h3>Endpoints</h3>
+                    <table class="api-table">
+                        <tr>
+                            <th>Endpoint</th>
+                            <th>Method</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>/api/identify</td>
+                            <td>POST</td>
+                            <td>Identify a Pokémon from an image URL</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="docs-section">
+                    <h3>Request Format</h3>
+                    <div class="code-block">
+                        <pre><code>{
+  "imageUrl": "https://example.com/pokemon.jpg"
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="docs-section">
+                    <h3>Response Format</h3>
+                    <div class="code-block">
+                        <pre><code>{
+  "success": true,
+  "pokemon": {
+    "id": 25,
+    "name": "Pikachu",
+    "type": ["Electric"],
+    "confidence": 0.98
+  }
+}</code></pre>
+                    </div>
+                </div>
+                
+                <div class="docs-section">
+                    <h3>Error Handling</h3>
+                    <div class="code-block">
+                        <pre><code>{
+  "success": false,
+  "error": "Invalid image URL",
+  "code": "INVALID_URL"
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 PokéIdentifier. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="api.ts"></script>
+</body>
+</html>
