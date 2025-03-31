@@ -2,7 +2,7 @@ import { serve } from "bun";
 import path from "path";
 import fs from "fs";
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.resolve(import.meta.dir, "src"); // Ensure static files are served from a defined folder
 
 serve({
