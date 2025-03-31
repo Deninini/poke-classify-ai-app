@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "mkdir -p public && bun build src/script.ts --outdir public",
-    "dev": "bun run build && bun run serve"
+    "start": "vercel dev"
   },
   "devDependencies": {
     "@types/bun": "latest"
